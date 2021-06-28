@@ -22,37 +22,37 @@ end
 
 -- CREATE A BUTTOM --
 
-dxDrawButtom = function(text,posx,posy,width,height,font,fontsize,alpha)
+dxDrawbutton = function(text,posx,posy,width,height,font,fontsize,alpha)
 
-    local buttom = {}
+    local button = {}
     local relScale, relFontScale = math.min(math.max(posx/1600, 0.5), 1), math.min(math.max(posy/1600, 0.85),1)
 
 
-    buttom.text = text or "buttom"
-    buttom.font = font or "sans"
-    buttom.fontSize = (fontsize or 1) * relFontScale
-    buttom.padding = 10
-    buttom.minWidth = dxGetTextWidth(buttom.text, buttom.fontSize, buttom.font) +  buttom.padding * 3
+    button.text = text or "button"
+    button.font = font or "sans"
+    button.fontSize = (fontsize or 1) * relFontScale
+    button.padding = 10
+    button.minWidth = dxGetTextWidth(button.text, button.fontSize, button.font) +  button.padding * 3
     
-    buttom.width, buttom.height = math.floor(width * relScale), math.floor(height * relScale)
+    button.width, button.height = math.floor(width * relScale), math.floor(height * relScale)
 
-    buttom.width = buttom.width < buttom.minWidth and buttom.minWidth or buttom.width
+    button.width = button.width < button.minWidth and button.minWidth or button.width
 
     
-    buttom.x, buttom.y = (posx - buttom.width),(posy - buttom.height)
+    button.x, button.y = (posx - button.width),(posy - button.height)
 
-    dxDrawRectangle(buttom.x, buttom.y, buttom.width, buttom.height, tocolor(255,255,255,alpha))
-    dxDrawText(string.upper(buttom.text), buttom.x, buttom.y, buttom.x + buttom.width, buttom.y + buttom.height, tocolor(0,0,0,alpha), buttom.fontSize, buttom.font,"center","center", false, false, false, true)
+    dxDrawRectangle(button.x, button.y, button.width, button.height, tocolor(255,255,255,alpha))
+    dxDrawText(string.upper(button.text), button.x, button.y, button.x + button.width, button.y + button.height, tocolor(0,0,0,alpha), button.fontSize, button.font,"center","center", false, false, false, true)
 
 
     local isCursorInside =  function()
-        if isCursorHover(buttom.x, buttom.y, buttom.width, buttom.height) then
+        if isCursorHover(button.x, button.y, button.width, button.height) then
             return true
         end
         return false
     end
     local isClicked =   function ()
-        if isCursorHover(buttom.x, buttom.y, buttom.width, buttom.height) and temp then
+        if isCursorHover(button.x, button.y, button.width, button.height) and temp then
             temp = false
             return true
         end
@@ -66,6 +66,7 @@ dxDrawButtom = function(text,posx,posy,width,height,font,fontsize,alpha)
     }
 
 end
+
 
 
 function isCursorHover(pX,pY,sX,sY)
