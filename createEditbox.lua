@@ -1,5 +1,5 @@
 --- EDITBOX CREATED BY ANDRESTVZ -- 
---- PLEASE NOT ERASE THIS LINE  ---
+      --- do not delete  ---
 
 local screenWidth, screenHeight = guiGetScreenSize()
 
