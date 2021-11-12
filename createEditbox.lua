@@ -28,10 +28,12 @@ function createEditbox(text,posx,posy,width,height,color,fontsize,font,fontcolor
         end
     end)
     
-	addEventHandler("onClientKey", root, function()
-        if object.isActive then 
-            if string.len(object.text) > 0 and key == "backspace" then
-                object.text = string.sub(object.text,1,string.len(object.text) -1) -- elimina el ultimo valor de la string
+	addEventHandler("onClientKey", root, function(key,status)
+        if status then
+            if object.isActive then 
+                if string.len(object.text) > 0 and key == "backspace" then
+                    object.text = string.sub(object.text,1,string.len(object.text) -1) -- elimina el ultimo valor de la string
+                end
             end
         end
     end)
