@@ -76,5 +76,5 @@ function createEditbox(text,posx,posy,width,height,color,fontsize,font,fontcolor
     return {
         render = object.render,
         text = object.getText
-    }
+   }
 end
