@@ -11,7 +11,7 @@ Create a dxlib.lua file and copy paste the function dxDrawCheckbox and isHoverCu
 ## Create a Checkbox
 
 `
-bool dxDrawCheckbox ( float x [1], float y [2], float width [3], float height [4], int color [5], bool postGUI = false [6])
+object = dxDrawCheckbox ( float x [1], float y [2], float width [3], float height [4], int color [5], bool postGUI = false [6])
 `
 
 #### Required Arguments:
@@ -21,6 +21,16 @@ bool dxDrawCheckbox ( float x [1], float y [2], float width [3], float height [4
 4. An float representing the height of the rectangle, drawn in a downwards direction from the origin.
 5. The hex color of the rectangle, produced using tocolor or 0xAARRGGBB (AA = alpha, RR = red, GG = green, BB = blue).
 6. A bool representing whether the line should be drawn on top of or behind any ingame GUI.
+
+#### Return --> the object complete.
+```Lua
+function 
+-- USE IN RENDER EVENT
+object.render() -- Render the Checkbox
+-- NOT USE IN RENDER EVENT
+object.getStatus() -- returns true if it saves the player 
+object.saveColor() -- When the player click the circle changes the color when he save.
+```
 
 #### Example:
 ```Lua
