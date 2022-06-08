@@ -5,8 +5,8 @@
 	<script src="dxlib.lua" type="client" />
 	<file src="images/recir.png" />
 	
-	<exports function="createEditbox" type="client" />
-	<exports function="createButton" type="client" />
-	<exports function="createCheckbox" type="client" />
+	<exports function="dxDrawEditbox" type="client" />
+	<exports function="dxDrawButton" type="client" />
+	<exports function="dxDrawCheckbox" type="client" />
 
 </meta>
