@@ -24,6 +24,7 @@ bool dxDrawRectangle ( float x, float y, float width, float height, int color, b
 
 #### Example:
 ```Lua
+local screen = Vector2(guiGetScreenSize())
 addEventHandler("onClientResourceStart", root, 
 function()
     showCursor(true)
