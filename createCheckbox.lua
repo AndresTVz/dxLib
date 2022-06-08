@@ -17,6 +17,7 @@ function createCheckbox(x,y,w,h,color,postGUI)
         temp = false,
         tick = 0
     }
+
     addEventHandler("onClientClick", getRootElement(),
     function(button, state)
         if (button == "left" and state == "down") then
@@ -36,12 +37,11 @@ function createCheckbox(x,y,w,h,color,postGUI)
         object.progress = object.x
         object.progress = interpolateBetween( object.isActived and (object.progress - (circle - object.h)) or (object.progress + object.h), 0, 0, object.isActived and (object.progress + object.h) or (object.progress - (circle - object.h)) , 0, 0, math.min(1000, currentTick - object.tick)/1000, "Linear") 
         dxDrawImageSection(object.x, object.y, object.w, object.h, 51, 0, 105, 50, object.image, 0,0,0, object.rectangleColor, object.postGUI)
-
         dxDrawImageSection(object.progress, object.y - (circle - object.h)/2, circle, circle, 0, 0, 50, 51, object.image, 0,0,0, object.isActived and object.checkColor or object.circleColor, object.postGUI)
     end
 
     object.isClicked = function()
-        if getKeyState("mouse1") and object.temp and isCursorHover(object.x,object.y,object.w,object.h) then
+        if object.temp and isCursorHover(object.x,object.y,object.w,object.h) then
             object.temp = false
             if not object.isActived then
                 object.tick = getTickCount()
