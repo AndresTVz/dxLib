@@ -1,5 +1,7 @@
-function createCheckbox(x,y,w,h,color,postGUI)
+--- EDITBOX CREATED BY ANDRESTVZ -- 
+      --- do not delete  ---
 
+function createCheckbox(x,y,w,h,color,postGUI)
     local object = {
         id = math.floor(x+y+w+h),
         x = x or 0,
