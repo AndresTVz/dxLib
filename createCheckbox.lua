@@ -1,7 +1,7 @@
 --- EDITBOX CREATED BY ANDRESTVZ -- 
       --- do not delete  ---
 
-function createCheckbox(x,y,w,h,color,postGUI)
+function dxDrawCheckbox(x,y,w,h,color,postGUI)
     local object = {
         id = math.floor(x+y+w+h),
         x = x or 0,
@@ -31,16 +31,7 @@ function createCheckbox(x,y,w,h,color,postGUI)
         object.checkColor = color
     end
 
-    object.render = function()        
-        local circle = object.h * 1.25
-        local currentTick = getTickCount()
-        object.progress = object.x
-        object.progress = interpolateBetween( object.isActived and (object.progress - (circle - object.h)) or (object.progress + object.h), 0, 0, object.isActived and (object.progress + object.h) or (object.progress - (circle - object.h)) , 0, 0, math.min(1000, currentTick - object.tick)/1000, "Linear") 
-        dxDrawImageSection(object.x, object.y, object.w, object.h, 51, 0, 105, 50, object.image, 0,0,0, object.rectangleColor, object.postGUI)
-        dxDrawImageSection(object.progress, object.y - (circle - object.h)/2, circle, circle, 0, 0, 50, 51, object.image, 0,0,0, object.isActived and object.checkColor or object.circleColor, object.postGUI)
-    end
-
-    object.isClicked = function()
+    object.render = function()
         if object.temp and isCursorHover(object.x,object.y,object.w,object.h) then
             object.temp = false
             if not object.isActived then
@@ -50,9 +41,15 @@ function createCheckbox(x,y,w,h,color,postGUI)
                 object.tick = getTickCount()
                 object.isActived = false
             end
-            return object.id
         end
-        return false
+
+        local circle = object.h * 1.25
+        local currentTick = getTickCount()
+
+        object.progress = object.x
+        object.progress = interpolateBetween( object.isActived and (object.progress - (circle - object.h)) or (object.progress + object.h), 0, 0, object.isActived and (object.progress + object.h) or (object.progress - (circle - object.h)) , 0, 0, math.min(1000, currentTick - object.tick)/1000, "Linear") 
+        dxDrawImageSection(object.x, object.y, object.w, object.h, 51, 0, 105, 50, object.image, 0,0,0, object.rectangleColor, object.postGUI)
+        dxDrawImageSection(object.progress, object.y - (circle - object.h)/2, circle, circle, 0, 0, 50, 51, object.image, 0,0,0, object.isActived and object.checkColor or object.circleColor, object.postGUI)
     end
 
     object.getStatus = function()
