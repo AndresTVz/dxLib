@@ -1,4 +1,4 @@
-function dxDrawCheckbox(x,y,w,h,color,postGUI)
+function createCheckbox(x,y,w,h,color,postGUI)
 
     local object = {
         id = math.floor(x+y+w+h),
