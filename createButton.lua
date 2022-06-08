@@ -1,3 +1,5 @@
+--- EDITBOX CREATED BY ANDRESTVZ -- 
+      --- do not delete  ---
 function createButton(text,posx,posy,width,height,color,fontsize,font,fontcolor,textalignHor,textalignVer)
 
     local object = {
