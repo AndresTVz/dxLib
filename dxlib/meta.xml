@@ -4,5 +4,9 @@
   
 	<script src="dxlib.lua" type="client" />
 	<file src="images/recir.png" />
+	
+	<exports function="createEditbox" type="client" />
+	<exports function="createButton" type="client" />
+	<exports function="createCheckbox" type="client" />
 
 </meta>
