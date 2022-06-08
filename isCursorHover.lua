@@ -2,7 +2,6 @@
       --- do not delete  ---
       
 local screen = Vector2(guiGetScreenSize())
-
 function isCursorHover(pX,pY,sX,sY)
 	if isCursorShowing() then
 		local cX,cY,_,_,_ = getCursorPosition()
