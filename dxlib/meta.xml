@@ -1,0 +1,8 @@
+<meta>
+  
+	<info author="AndresTVz" type="script" name="dx Library" />
+  
+	<script src="dxlib.lua" type="client" />
+	<file src="images/recir.png" />
+
+</meta>
