@@ -20,7 +20,6 @@ function createEditbox(text,posx,posy,width,height,color,fontsize,font,fontcolor
         isActive = false,
         isEnable = false,
     }
-
 	addEventHandler("onClientCharacter", getRootElement(),function(letter)
         if letter ~= " " then
             letra = letter
