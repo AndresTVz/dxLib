@@ -17,7 +17,6 @@ function createCheckbox(x,y,w,h,color,postGUI)
         temp = false,
         tick = 0
     }
-
     addEventHandler("onClientClick", getRootElement(),
     function(button, state)
         if (button == "left" and state == "down") then
