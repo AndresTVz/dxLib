@@ -2,7 +2,6 @@
       --- do not delete  ---
 
 function createEditbox(text,posx,posy,width,height,color,fontsize,font,fontcolor,textalignHor,textalignVer,ismasked)
-
     local object = {
         id = id,
         textDefault = text or "",
