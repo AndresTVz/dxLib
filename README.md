@@ -2,15 +2,15 @@
 
 #### Here you can find all the mta library that I have been creating during these years.
 
-## Install 
+## DxRectangle
+```Lua
+DxRectangle:create( int x, int y, int width, int height, color, int radius [default is false])
+DxRectangle:background_color( int r, int g, int b, int alpha)
+DxRectangle:border_radius( radius [default is false])
+DxRectangle:width( int width )
+DxRectangle:height( int height )
+```
 
-`
-Create a dxlib.lua file and copy paste the function and isHoverCursor function or insert the funtions in your code.
-`
-
-## Thanks for the support
-
-### please do not take over the codes, always with a thank you
   
   
 
