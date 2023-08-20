@@ -2,15 +2,15 @@
 
 #### Here you can find all the mta library that I have been creating during these years.
 
-## DxRectangle
+## Container
 ```Lua
-DxRectangle:create( int x, int y, int width, int height, color, int radius [default is false])
-DxRectangle:background_color( int r, int g, int b, int alpha)
-DxRectangle:padding( int left, int up, int right, int down)
-DxRectangle:paddingAll( int padding)
-DxRectangle:border_radius( radius [default is false])
-DxRectangle:width( int width )
-DxRectangle:height( int height )
+Container:create( int x, int y, int width, int height, color, int radius [default is false])
+Container:background_color( int r, int g, int b, int alpha)
+Container:padding( int left, int up, int right, int down)
+Container:paddingAll( int padding )
+Container:border_radius( radius [default is 0] )
+Container:width( int width )
+Container:height( int height )
 ```
 
   
